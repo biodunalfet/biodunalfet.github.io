@@ -10,7 +10,7 @@ locale                   : "en"
 title                    : "Hamza F."
 title_separator          : "-"
 name                     : "Hamza Fetuga"
-description              : "tech, code, life"
+description              : 
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -79,7 +79,7 @@ analytics:
 author:
   name             : "Hamza"
   avatar           : /assets/images/bio-photo.jpg
-  bio              : "Sojourner"
+  bio              : "&#7865;l&#7865;&#x0301;r&#7885;"
   location         : "Ibadan, Nigeria"
   email            : "hfetuga@gmail.com"
   uri              :
