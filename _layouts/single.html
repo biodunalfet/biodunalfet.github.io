@@ -53,8 +53,8 @@ layout: default
       {% include post_pagination.html %}
     </div>
 
-    {% if site.comments.provider and page.comments %}
-      {% include comments.html %}
+    {% if page.comments %}
+      {% include disqus.html disqus_identifier=page.id %}
     {% endif %}
   </article>
 

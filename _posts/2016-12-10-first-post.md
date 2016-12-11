@@ -2,6 +2,7 @@
 layout: single
 title: First post
 author: Hamza
+comments: true
 ---
 
 I've been thinking about starting a blog for quite some time now. I finally made up my mind to start one for two reasons.
