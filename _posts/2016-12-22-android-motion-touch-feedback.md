@@ -10,26 +10,26 @@ comments: true
 
 **Touch Feedback** helps add nice animation to signify view interactions like clicks and long clicks.
 
-It can be implemented in the following ways
+It can be implemented in the following ways <br />
 1. For simple bounded ripple effects on your view, set its background to 
  `?android:attr/selectableItemBackground`.
 2. For unbounded ripple effect, set the view's background to
  `?android:attr/selectableItemBackgroundBorderless`. The ripple effect extends beyond the originating view 
  and ends at the bounds of its immediate non null parent. This requires API >= 21.
- 3. Using a `RippleDrawable`. (Requires API >= 21) <br />
+3. Using a `RippleDrawable`. (Requires API >= 21) <br />
  A `RippleDrawable` can be used in two ways, xml and Java. 
 
 Before we proceed, it's important to understand what a _Mask_ is. A mask is a layer that defines the bounds of the ripple effect
 
-For an unbounded ripple effect with no mask 
-```
+For an unbounded ripple effect (with no mask) 
+{% highlight java %}
 <?xml version="1.0" encoding="utf-8"?>
 <ripple android:color="@color/unbounded_ripple"
     xmlns:android="http://schemas.android.com/apk/res/android" />
- ```
+{% endhighlight %}
 
 For a bounded ripple with an oval mask
-```
+{% highlight java %}
 <?xml version="1.0" encoding="utf-8"?>
 <ripple android:color="@color/colorAccent"
     xmlns:android="http://schemas.android.com/apk/res/android">
@@ -39,10 +39,10 @@ For a bounded ripple with an oval mask
         </shape>
     </item>
 </ripple>
-```
+{% endhighlight %}
 
 For a bounded ripple with a rectangular mask
-```
+{% highlight java %}
 <?xml version="1.0" encoding="utf-8"?>
 <ripple android:color="@color/blue"
     xmlns:android="http://schemas.android.com/apk/res/android">
@@ -52,10 +52,10 @@ For a bounded ripple with a rectangular mask
         </shape>
     </item>
 </ripple>
-```
+{% endhighlight %}
 
 For a bounded ripple with a rectangular mask and a child layer (base background)
-```
+{% highlight java %}
 <?xml version="1.0" encoding="utf-8"?>
 <ripple android:color="@color/colorAccent"
     xmlns:android="http://schemas.android.com/apk/res/android">
@@ -68,10 +68,10 @@ For a bounded ripple with a rectangular mask and a child layer (base background)
     <!--child layer-->
     <item android:drawable="@color/green" />
 </ripple>
-```
+{% endhighlight %}
 
  For bounded ripple effects in Java
-```
+{% highlight java %}
  TextView textView_ripple_drawable = (TextView) findViewById(R.id.textView_ripple_drawable_java);
         
         int[][] states = new int[][] {
@@ -102,7 +102,7 @@ For a bounded ripple with a rectangular mask and a child layer (base background)
         else {
             Toast.makeText(this, "Requires API >= 21", Toast.LENGTH_SHORT).show();
         }
-```
+{% endhighlight %}
 
 The `contentColor` variable when set to null, gives the view the default background. To set the 
 bounds of the ripple to that of the view, simply set the `shapeDrawable` variable to null.
