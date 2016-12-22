@@ -12,16 +12,16 @@ comments: true
 
 It can be implemented in the following ways <br />
 1. For simple bounded ripple effects on your view, set its background to 
- `?android:attr/selectableItemBackground`.
+ `?android:attr/selectableItemBackground`. <br />
 2. For unbounded ripple effect, set the view's background to
  `?android:attr/selectableItemBackgroundBorderless`. The ripple effect extends beyond the originating view 
- and ends at the bounds of its immediate non null parent. This requires API >= 21.
+ and ends at the bounds of its immediate non null parent. This requires API >= 21. <br />
 3. Using a `RippleDrawable`. (Requires API >= 21) <br />
  A `RippleDrawable` can be used in two ways, xml and Java. 
 
 Before we proceed, it's important to understand what a _Mask_ is. A mask is a layer that defines the bounds of the ripple effect
 
-For an unbounded ripple effect (with no mask) 
+..* For an unbounded ripple effect (with no mask) 
 {% highlight java %}
 <?xml version="1.0" encoding="utf-8"?>
 <ripple android:color="@color/unbounded_ripple"
@@ -108,8 +108,7 @@ The `contentColor` variable when set to null, gives the view the default backgro
 bounds of the ripple to that of the view, simply set the `shapeDrawable` variable to null.
 
 
-
 **References**
-1. [RippleDrawable](https://developer.android.com/reference/android/graphics/drawable/RippleDrawable.html)
-2. [Exploring Meaningful Motion on Android](https://labs.ribot.co.uk/exploring-meaningful-motion-on-android-1cd95a4bc61d#.x3gxzy8ms)
-3. [Defining Custom Animations](https://developer.android.com/training/material/animations.html)
+1. [RippleDrawable](https://developer.android.com/reference/android/graphics/drawable/RippleDrawable.html) <br />
+2. [Exploring Meaningful Motion on Android](https://labs.ribot.co.uk/exploring-meaningful-motion-on-android-1cd95a4bc61d#.x3gxzy8ms) <br />
+3. [Defining Custom Animations](https://developer.android.com/training/material/animations.html) <br />
