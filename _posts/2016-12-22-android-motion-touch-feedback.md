@@ -12,24 +12,29 @@ comments: true
 
 It can be implemented in the following ways <br />
 1. For simple bounded ripple effects on your view, set its background to 
- `?android:attr/selectableItemBackground`. <br />
-2. For unbounded ripple effect, set the view's background to
- `?android:attr/selectableItemBackgroundBorderless`. The ripple effect extends beyond the originating view 
- and ends at the bounds of its immediate non null parent. This requires API >= 21. <br />
+   ~~~ xml
+   ?android:attr/selectableItemBackground
+   ~~~
+2. For unbounded ripple effect, set the view's background to 
+   ~~~ xml
+   ?android:attr/selectableItemBackgroundBorderless
+   ~~~ 
+   The ripple effect extends beyond the originating view and ends at the bounds of its immediate non null parent. 
+   This requires API >= 21.
 3. Using a `RippleDrawable`. (Requires API >= 21) <br />
- A `RippleDrawable` can be used in two ways, xml and Java. 
+   A `RippleDrawable` can be used in two ways, xml and Java. 
 
 Before we proceed, it's important to understand what a _Mask_ is. A mask is a layer that defines the bounds of the ripple effect
 
-..* For an unbounded ripple effect (with no mask) 
-{% highlight java %}
+* For an unbounded ripple effect (with no mask) 
+{% highlight xml %}
 <?xml version="1.0" encoding="utf-8"?>
 <ripple android:color="@color/unbounded_ripple"
     xmlns:android="http://schemas.android.com/apk/res/android" />
 {% endhighlight %}
 
-For a bounded ripple with an oval mask
-{% highlight java %}
+* For a bounded ripple with an oval mask
+{% highlight xml %}
 <?xml version="1.0" encoding="utf-8"?>
 <ripple android:color="@color/colorAccent"
     xmlns:android="http://schemas.android.com/apk/res/android">
@@ -41,8 +46,8 @@ For a bounded ripple with an oval mask
 </ripple>
 {% endhighlight %}
 
-For a bounded ripple with a rectangular mask
-{% highlight java %}
+* For a bounded ripple with a rectangular mask
+{% highlight xml %}
 <?xml version="1.0" encoding="utf-8"?>
 <ripple android:color="@color/blue"
     xmlns:android="http://schemas.android.com/apk/res/android">
@@ -54,8 +59,8 @@ For a bounded ripple with a rectangular mask
 </ripple>
 {% endhighlight %}
 
-For a bounded ripple with a rectangular mask and a child layer (base background)
-{% highlight java %}
+* For a bounded ripple with a rectangular mask and a child layer (base background)
+{% highlight xml %}
 <?xml version="1.0" encoding="utf-8"?>
 <ripple android:color="@color/colorAccent"
     xmlns:android="http://schemas.android.com/apk/res/android">
@@ -70,7 +75,7 @@ For a bounded ripple with a rectangular mask and a child layer (base background)
 </ripple>
 {% endhighlight %}
 
- For bounded ripple effects in Java
+ * For bounded ripple effects in Java
 {% highlight java %}
  TextView textView_ripple_drawable = (TextView) findViewById(R.id.textView_ripple_drawable_java);
         
@@ -108,7 +113,7 @@ The `contentColor` variable when set to null, gives the view the default backgro
 bounds of the ripple to that of the view, simply set the `shapeDrawable` variable to null.
 
 
-**References**
+**References** <br />
 1. [RippleDrawable](https://developer.android.com/reference/android/graphics/drawable/RippleDrawable.html) <br />
 2. [Exploring Meaningful Motion on Android](https://labs.ribot.co.uk/exploring-meaningful-motion-on-android-1cd95a4bc61d#.x3gxzy8ms) <br />
 3. [Defining Custom Animations](https://developer.android.com/training/material/animations.html) <br />
