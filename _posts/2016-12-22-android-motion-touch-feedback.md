@@ -14,11 +14,11 @@ It can be implemented in the following ways <br />
 1. For simple bounded ripple effects on your view, set its background to 
    {% highlight xml %}
    ?android:attr/selectableItemBackground
- {% endhighlight %}
+   {% endhighlight %}
 2. For unbounded ripple effect, set the view's background to 
    {% highlight xml %}
    ?android:attr/selectableItemBackgroundBorderless
-  {% endhighlight %}
+   {% endhighlight %}
    The ripple effect extends beyond the originating view and ends at the bounds of its immediate non null parent. 
    This requires API >= 21.
 3. Using a `RippleDrawable`. (Requires API >= 21) <br />
