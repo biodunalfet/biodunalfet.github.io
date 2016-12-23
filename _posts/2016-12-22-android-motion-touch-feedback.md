@@ -41,69 +41,67 @@ It can be implemented in the following ways
 			</item>
 			</ripple>
 
-
   * For a bounded ripple with a rectangular mask
-```
-<?xml version="1.0" encoding="utf-8"?>
-<ripple android:color="@color/blue"
-		xmlns:android="http://schemas.android.com/apk/res/android">
-		<item android:id="@android:id/mask">
-				<shape android:shape="rectangle">
-						<solid android:color="@color/blue"/>
-				</shape>
-		</item>
-</ripple>
-```
-      
-  * For a bounded ripple with a rectangular mask and a child layer (base background)
-      ```xml
-      <?xml version="1.0" encoding="utf-8"?>
-      <ripple android:color="@color/colorAccent"
-          xmlns:android="http://schemas.android.com/apk/res/android">
-          <item android:id="@android:id/mask">
-              <shape android:shape="oval">
-                  <solid android:color="@color/colorAccent"/>
-              </shape>
-          </item>
 
-          <!--child layer-->
-          <item android:drawable="@color/green" />
-      </ripple>
-      ```
+			<?xml version="1.0" encoding="utf-8"?>
+			<ripple android:color="@color/blue"
+					xmlns:android="http://schemas.android.com/apk/res/android">
+					<item android:id="@android:id/mask">
+							<shape android:shape="rectangle">
+									<solid android:color="@color/blue"/>
+							</shape>
+					</item>
+			</ripple>
+			
+  * For a bounded ripple with a rectangular mask and a child layer (base background)
+
+			<?xml version="1.0" encoding="utf-8"?>
+			<ripple android:color="@color/colorAccent"
+					xmlns:android="http://schemas.android.com/apk/res/android">
+					<item android:id="@android:id/mask">
+							<shape android:shape="oval">
+									<solid android:color="@color/colorAccent"/>
+							</shape>
+					</item>
+
+					<!--child layer-->
+					<item android:drawable="@color/green" />
+			</ripple>
+
 
  *  For bounded ripple effects in Java
-      ```java
-      TextView textView_ripple_drawable = (TextView) findViewById(R.id.textView_ripple_drawable_java);
-              
-	int[][] states = new int[][] {
-					new int[] { android.R.attr.state_enabled}, // enabled
-					new int[] {-android.R.attr.state_enabled}, // disabled
-					new int[] {-android.R.attr.state_checked}, // unchecked
-					new int[] { android.R.attr.state_pressed}  // pressed
-	};
+      
+			TextView textView_ripple_drawable = (TextView) findViewById(R.id.textView_ripple_drawable_java);
+					
+			int[][] states = new int[][] {
+							new int[] { android.R.attr.state_enabled}, // enabled
+							new int[] {-android.R.attr.state_enabled}, // disabled
+							new int[] {-android.R.attr.state_checked}, // unchecked
+							new int[] { android.R.attr.state_pressed}  // pressed
+			};
 
-	int[] colors = new int[] {
-					Color.CYAN,
-					Color.RED,
-					Color.GREEN,
-					Color.YELLOW
-	};
+			int[] colors = new int[] {
+							Color.CYAN,
+							Color.RED,
+							Color.GREEN,
+							Color.YELLOW
+			};
 
-	ColorStateList colorStateList = new ColorStateList(states, colors);
-	if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-			ShapeDrawable shapeDrawable = new ShapeDrawable(new OvalShape());
+			ColorStateList colorStateList = new ColorStateList(states, colors);
+			if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+					ShapeDrawable shapeDrawable = new ShapeDrawable(new OvalShape());
 
-	//ColorDrawable contentColor = null;
-	ColorDrawable contentColor = new ColorDrawable(ContextCompat.getColor(this,R.color.grey));
-	RippleDrawable rippleDrawable = new RippleDrawable(colorStateList,
-					contentColor,
-					shapeDrawable);
-	textView_ripple_drawable.setBackground(rippleDrawable);
-}
-else {
-	Toast.makeText(this, "Requires API >= 21", Toast.LENGTH_SHORT).show();
-}
-      ```
+			//ColorDrawable contentColor = null;
+			ColorDrawable contentColor = new ColorDrawable(ContextCompat.getColor(this,R.color.grey));
+			RippleDrawable rippleDrawable = new RippleDrawable(colorStateList,
+							contentColor,
+							shapeDrawable);
+			textView_ripple_drawable.setBackground(rippleDrawable);
+			}
+			else {
+				Toast.makeText(this, "Requires API >= 21", Toast.LENGTH_SHORT).show();
+			}
+    
 
 	The `contentColor` variable when set to null, gives the view the default background. To set the bounds of the ripple to that of the view, simply set the `shapeDrawable` variable to null.
 
