@@ -7,7 +7,8 @@ comments: true
 
 **Touch Feedback** helps add nice animation to signify view interactions like clicks and long clicks.
 
-It can be implemented in the following ways <br />
+It can be implemented in the following ways
+
 1. For simple bounded ripple effects on your view, set its background to 
      ```
      ?android:attr/selectableItemBackground
@@ -16,11 +17,11 @@ It can be implemented in the following ways <br />
 2. For unbounded ripple effect, set the view's background to 
      ```
      ?android:attr/selectableItemBackgroundBorderless
-     ```
+     ```  
    The ripple effect extends beyond the originating view and ends at the bounds of its immediate non null parent. 
    This requires API >= 21.
-3. Using a `RippleDrawable`. (Requires API >= 21) <br />
-    A `RippleDrawable` can be used in two ways, xml and Java. <br />
+3. Using a `RippleDrawable`. (Requires API >= 21)  
+    A `RippleDrawable` can be used in two ways, xml and Java.
     Before we proceed, it's important to understand what a _Mask_ is. A mask is a layer that defines the bounds of the ripple effect
 
      * For an unbounded ripple effect (with no mask)
