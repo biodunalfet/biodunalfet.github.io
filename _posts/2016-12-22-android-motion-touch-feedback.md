@@ -25,13 +25,13 @@ It can be implemented in the following ways
     Before we proceed, it's important to understand what a _Mask_ is. A mask is a layer that defines the bounds of the ripple effect
 
      * For an unbounded ripple effect (with no mask)
-       ~~~ xml
+       ```xml
        <?xml version="1.0" encoding="utf-8"?>
        <ripple android:color="@color/unbounded_ripple"
        xmlns:android="http://schemas.android.com/apk/res/android" />
-       ~~~
+       ```
     * For a bounded ripple with an oval mask
-       ~~~ xml
+       ```xml
        <?xml version="1.0" encoding="utf-8"?>
        <ripple android:color="@color/colorAccent"
            xmlns:android="http://schemas.android.com/apk/res/android">
@@ -41,10 +41,9 @@ It can be implemented in the following ways
                </shape>
            </item>
        </ripple>
-       ~~~
-
+       ```
     * For a bounded ripple with a rectangular mask
-      ```
+      ```xml
       <?xml version="1.0" encoding="utf-8"?>
       <ripple android:color="@color/blue"
           xmlns:android="http://schemas.android.com/apk/res/android">
@@ -57,7 +56,7 @@ It can be implemented in the following ways
       ```
 
     * For a bounded ripple with a rectangular mask and a child layer (base background)
-      ```
+      ```xml
       <?xml version="1.0" encoding="utf-8"?>
       <ripple android:color="@color/colorAccent"
           xmlns:android="http://schemas.android.com/apk/res/android">
@@ -73,7 +72,7 @@ It can be implemented in the following ways
       ```
 
     * For bounded ripple effects in Java
-      {% highlight java %}
+      ```java
       TextView textView_ripple_drawable = (TextView) findViewById(R.id.textView_ripple_drawable_java);
               
               int[][] states = new int[][] {
@@ -104,7 +103,7 @@ It can be implemented in the following ways
               else {
                   Toast.makeText(this, "Requires API >= 21", Toast.LENGTH_SHORT).show();
               }
-      {% endhighlight %}
+      ```
 
 The `contentColor` variable when set to null, gives the view the default background. To set the 
 bounds of the ripple to that of the view, simply set the `shapeDrawable` variable to null.
