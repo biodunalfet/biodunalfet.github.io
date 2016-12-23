@@ -24,24 +24,24 @@ It can be implemented in the following ways
     Before we proceed, it's important to understand what a _Mask_ is. A mask is a layer that defines the bounds of the ripple effect
 
   * For an unbounded ripple effect (with no mask)
-```
-<?xml version="1.0" encoding="utf-8"?>
-<ripple android:color="@color/unbounded_ripple"
-xmlns:android="http://schemas.android.com/apk/res/android" />
-```
+	```
+	<?xml version="1.0" encoding="utf-8"?>
+	<ripple android:color="@color/unbounded_ripple"
+	xmlns:android="http://schemas.android.com/apk/res/android" />
+	```
 		
  * For a bounded ripple with an oval mask
-```
-<?xml version="1.0" encoding="utf-8"?>
-<ripple android:color="@color/colorAccent"
-xmlns:android="http://schemas.android.com/apk/res/android">
-<item android:id="@android:id/mask">
-<shape android:shape="oval">
-<solid android:color="@color/colorAccent"/>
-</shape>
-</item>
-</ripple>
-```
+	```
+	<?xml version="1.0" encoding="utf-8"?>
+	<ripple android:color="@color/colorAccent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:id="@android:id/mask">
+	<shape android:shape="oval">
+	<solid android:color="@color/colorAccent"/>
+	</shape>
+	</item>
+	</ripple>
+	```
 
   * For a bounded ripple with a rectangular mask
 ```
