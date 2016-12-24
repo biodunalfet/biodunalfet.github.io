@@ -105,6 +105,10 @@ It can be implemented in the following ways
 
 	The `contentColor` variable when set to null, gives the view the default background. To set the bounds of the ripple to that of the view, simply set the `shapeDrawable` variable to null.
 
+Below is a clip showing the ripple effect generated from different implementations
+{:refdef: style="text-align: center;"}
+![touch feedback]({{ site.url }}/assets/images/mask.gif)
+{: refdef}
 
 **References** <br />
 1. [RippleDrawable](https://developer.android.com/reference/android/graphics/drawable/RippleDrawable.html) <br />
