@@ -11,6 +11,7 @@ title                    : "Hamza F."
 title_separator          : "-"
 name                     : "Hamza Fetuga"
 description              : 
+consturl                 : https://biodunalfet.github.io
 url                      : https://biodunalfet.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -18,7 +19,7 @@ teaser                   : # path of fallback teaser image, e.g. "/assets/images
 breadcrumbs            : true # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : disqus# false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
+  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
     shortname            : biodunalfet-github-io# https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
