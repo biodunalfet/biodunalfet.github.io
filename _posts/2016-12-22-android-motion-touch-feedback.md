@@ -11,7 +11,7 @@ It can be implemented in the following ways
 
 1. For simple bounded ripple effects on your view, set its background to
  
-			?android:attr/selectableItemBackgroundBorderless
+			?android:attr/selectableItemBackground
    
 2. For unbounded ripple effect, set the view's background to  
 
