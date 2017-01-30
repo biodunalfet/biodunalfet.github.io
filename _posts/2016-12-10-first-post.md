@@ -3,6 +3,7 @@ layout: single
 title: First post
 author: Hamza
 comments: true
+disqus_id: first_post_
 ---
 
 I've been thinking about starting a blog for quite some time now. I finally made up my mind to start one for two reasons.
