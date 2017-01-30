@@ -3,6 +3,7 @@ title: Android Motion&#58; Touch Feedback
 layout: single
 author: Hamza
 comments: true
+disqus_id : touch_feedback
 ---
 
 **Touch Feedback** helps add nice animation to signify view interactions like clicks and long clicks.

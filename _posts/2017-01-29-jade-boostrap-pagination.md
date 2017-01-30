@@ -3,6 +3,8 @@ title: Implementing Pagination using Jade and Bootstrap
 layout: single
 author: Hamza
 comments: true
+disqus_id : implementing_pagination_using_jade_and_bootstrap
+tags: ['jade', 'bootstrap', 'node']
 ---
 
 A few weeks ago while building a simple node.js app, I had to display a really long list of items. 
